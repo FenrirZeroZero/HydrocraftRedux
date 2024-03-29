@@ -35,17 +35,16 @@ junk = {'Base.ElectronicsScrap','Base.Newspaper','Hydrocraft.HCBatterysmalldead'
 good = {'Base.Bullets44Box','Base.Bullets9mmBox','Base.ShotgunShellsBox','Hydrocraft.HCColoredwire','Hydrocraft.HCColander','Base.LightBulb','Hydrocraft.HCSyringeempty','Base.Coldpack','Base.RubberBand','Base.Screws','Base.CordlessPhone','Base.KitchenKnife','Hydrocraft.HCHairdryer','farming.GardeningSprayEmpty','Hydrocraft.HCTampon','Base.Headphones','Hydrocraft.HCClothespin','Hydrocraft.HCBungeecord','Hydrocraft.HCWeldinghose','Hydrocraft.HCRubberhose','Radio.CDplayer','Base.Needle','Hydrocraft.HCBoxphoto','Hydrocraft.HCBoxgarden','Hydrocraft.HCBoxpet','Hydrocraft.HCBoxelectronic','Hydrocraft.HCBoxlab','Hydrocraft.HCMysteryseedspacket','Hydrocraft.HCCircuitboarduseless','Hydrocraft.HCElectronicparts01','Hydrocraft.HCColoredwire','Base.Book','Hydrocraft.HCFlourempty','Hydrocraft.HCRiceempty','Hydrocraft.HCSugarempty','Hydrocraft.HCVinegarempty','Hydrocraft.HCGlueempty','Hydrocraft.HCValve','Hydrocraft.HCXmasgift'}
 
     player:getInventory():AddItems("Base.ScrapMetal",ZombRand(3));
-end
 
-if luck <= 12 then -- found junk
-    junkFinds = junk;
-else 
-    junkFinds = good;
-end
+	if luck <= 12 then -- found junk
+	    junkFinds = junk;
+	else 
+	    junkFinds = good;
+	end
 
-for _ in pairs(junkFinds) do count = count + 1 end
-ItemNr = ZombRand(count)+1;
-player:getInventory():AddItem(junkFinds[ItemNr]);
+	for _ in pairs(junkFinds) do count = count + 1 end
+	ItemNr = ZombRand(count)+1;
+	player:getInventory():AddItem(junkFinds[ItemNr]);
 
 end
 	
